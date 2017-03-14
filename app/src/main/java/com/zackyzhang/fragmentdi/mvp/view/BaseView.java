@@ -10,4 +10,6 @@ public interface BaseView {
 
     Context context();
 
+    void showMessage(String message);
+
 }

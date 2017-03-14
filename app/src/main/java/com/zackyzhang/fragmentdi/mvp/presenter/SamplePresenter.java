@@ -1,5 +1,7 @@
 package com.zackyzhang.fragmentdi.mvp.presenter;
 
+import android.widget.Toast;
+
 import com.zackyzhang.fragmentdi.data.GithubRepo;
 import com.zackyzhang.fragmentdi.data.GithubService;
 import com.zackyzhang.fragmentdi.di.scope.PerActivity;
@@ -14,12 +16,13 @@ import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import timber.log.Timber;
 
 /**
  * Created by lei on 3/13/17.
  */
 @PerActivity
-public class SamplePresenter implements ReposContract.presenter, Subscriber<List<GithubRepo>>{
+public class SamplePresenter implements ReposContract.presenter{
 
     private static final String TAG = "SamplePresenter";
 
@@ -48,26 +51,10 @@ public class SamplePresenter implements ReposContract.presenter, Subscriber<List
         mGithubService.getReposForUser("JakeWharton")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this);
-    }
-
-    @Override
-    public void onSubscribe(Subscription s) {
-        s.request(1);
-    }
-
-    @Override
-    public void onNext(List<GithubRepo> repos) {
-        this.showMovieListInView(repos);
-    }
-
-    @Override
-    public void onError(Throwable t) {
-
-    }
-
-    @Override
-    public void onComplete() {
-
+                .subscribe(repos -> this.showMovieListInView(repos),
+                        error -> Timber.tag(TAG).d(error.getMessage()),
+                        () -> this.mReposView.showMessage("Loaded!"),
+                        subscription -> subscription.request(1)
+                );
     }
 }

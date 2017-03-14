@@ -67,6 +67,11 @@ public class SampleFragment extends BaseFragment implements ReposContract.View{
     }
 
     @Override
+    public void showMessage(String message) {
+        showToastMessage(message);
+    }
+
+    @Override
     public void renderRepoList(List<GithubRepo> repos) {
         if (repos != null) {
             this.mRepos = repos;

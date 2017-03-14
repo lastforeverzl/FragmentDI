@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.view.View;
+import android.widget.Toast;
 
 import com.zackyzhang.fragmentdi.mvp.view.HasComponent;
 
@@ -94,4 +95,7 @@ public class BaseFragment extends Fragment {
         // Intentionally left empty.
     }
 
+    protected void showToastMessage(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+    }
 }
