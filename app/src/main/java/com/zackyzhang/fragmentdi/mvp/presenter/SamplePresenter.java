@@ -1,8 +1,9 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.presenter;
 
 import com.zackyzhang.fragmentdi.data.GithubRepo;
 import com.zackyzhang.fragmentdi.data.GithubService;
 import com.zackyzhang.fragmentdi.di.scope.PerActivity;
+import com.zackyzhang.fragmentdi.mvp.view.ReposContract;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
@@ -44,7 +45,7 @@ public class SamplePresenter implements ReposContract.presenter, Subscriber<List
     }
 
     private void getRepos() {
-        mGithubService.getReposForUser("lastforeverzl")
+        mGithubService.getReposForUser("JakeWharton")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this);

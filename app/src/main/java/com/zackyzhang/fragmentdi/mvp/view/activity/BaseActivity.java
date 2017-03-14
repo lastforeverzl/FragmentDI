@@ -1,11 +1,11 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view.activity;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 
+import com.zackyzhang.fragmentdi.MyApplication;
 import com.zackyzhang.fragmentdi.data.GithubService;
 import com.zackyzhang.fragmentdi.di.component.ApplicationComponent;
 import com.zackyzhang.fragmentdi.di.module.ActivityModule;

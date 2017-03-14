@@ -1,22 +1,14 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view.activity;
 
 import android.os.Bundle;
 
-import com.zackyzhang.fragmentdi.data.GithubRepo;
+import com.zackyzhang.fragmentdi.mvp.view.HasComponent;
+import com.zackyzhang.fragmentdi.R;
+import com.zackyzhang.fragmentdi.mvp.view.fragment.SampleFragment;
 import com.zackyzhang.fragmentdi.di.component.DaggerReposComponent;
 import com.zackyzhang.fragmentdi.di.component.ReposComponent;
 
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
-
-import java.util.List;
-
-import io.reactivex.Flowable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
-import timber.log.Timber;
-
-public class MainActivity extends BaseActivity implements HasComponent<ReposComponent>{
+public class MainActivity extends BaseActivity implements HasComponent<ReposComponent> {
 
     private static final String TAG = "MainActivity";
 

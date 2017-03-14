@@ -1,4 +1,4 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.zackyzhang.fragmentdi.R;
 import com.zackyzhang.fragmentdi.data.GithubRepo;
 
 import java.util.ArrayList;
@@ -16,7 +17,6 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 
 /**
  * Created by lei on 3/13/17.

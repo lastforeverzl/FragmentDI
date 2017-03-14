@@ -1,6 +1,6 @@
 package com.zackyzhang.fragmentdi.di.component;
 
-import com.zackyzhang.fragmentdi.SampleFragment;
+import com.zackyzhang.fragmentdi.mvp.view.fragment.SampleFragment;
 import com.zackyzhang.fragmentdi.di.module.ActivityModule;
 import com.zackyzhang.fragmentdi.di.module.ReposModule;
 import com.zackyzhang.fragmentdi.di.scope.PerActivity;

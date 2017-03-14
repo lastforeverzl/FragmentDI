@@ -1,6 +1,7 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view;
 
 import com.zackyzhang.fragmentdi.data.GithubRepo;
+import com.zackyzhang.fragmentdi.mvp.view.BaseView;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package com.zackyzhang.fragmentdi.di.component;
 
 import android.content.Context;
 
-import com.zackyzhang.fragmentdi.BaseActivity;
+import com.zackyzhang.fragmentdi.mvp.view.activity.BaseActivity;
 import com.zackyzhang.fragmentdi.data.GithubService;
 import com.zackyzhang.fragmentdi.di.module.ApplicationModule;
 import com.zackyzhang.fragmentdi.di.module.GithubServiceModule;

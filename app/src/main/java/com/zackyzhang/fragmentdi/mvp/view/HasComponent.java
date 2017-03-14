@@ -1,4 +1,4 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view;
 
 /**
  * Created by lei on 3/13/17.

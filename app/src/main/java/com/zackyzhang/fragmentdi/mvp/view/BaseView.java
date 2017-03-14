@@ -1,4 +1,4 @@
-package com.zackyzhang.fragmentdi;
+package com.zackyzhang.fragmentdi.mvp.view;
 
 import android.content.Context;
 
